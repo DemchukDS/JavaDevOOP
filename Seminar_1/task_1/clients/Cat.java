@@ -10,4 +10,8 @@ public class Cat extends Animals{
     public Cat() {
         super();
     }
+    @Override
+    public void fly() {
+        System.out.println("The cat can't fly!");
+    }
 }

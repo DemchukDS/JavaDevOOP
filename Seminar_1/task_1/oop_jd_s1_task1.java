@@ -16,13 +16,6 @@ public class oop_jd_s1_task1 {
         Animals test = new Cat();
         System.out.println(lexi.getWeight());
 
-        lexi.lifeCycle();
-
-        List<Animals> animals = new ArrayList<>();
-        animals.add(lexi);
-        animals.add(barsiq);
-        animals.add(test);
-
-        System.out.println(animals);
+        lexi.fly();
     }
 }

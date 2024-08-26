@@ -43,6 +43,15 @@ public class Animals {
     private void play() {
         System.out.println(getType() + "" + " play");
     }
+    public void toGo() {
+        System.out.println("going ...");
+    }
+    public void fly() {
+        System.out.println("flying ...");
+    }
+    public void swim() {
+        System.out.println("swimming ...");
+    }
 
     public String getName() {
         return name;
