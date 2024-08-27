@@ -1,4 +1,4 @@
-package Seminar_2.clients;
+package Seminar_2.clients.impl;
 
 public class Owner {
    public String name;
