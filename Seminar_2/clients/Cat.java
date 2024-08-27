@@ -1,0 +1,17 @@
+package Seminar_2.clients;
+
+import java.time.LocalDate;
+
+public class Cat extends Animals{
+
+    public Cat(String name, float weight, LocalDate age, Owner owner) {
+        super(name, weight, age, owner);
+    }
+    public Cat() {
+        super();
+    }
+    @Override
+    public void fly() {
+        System.out.println("The cat can't fly!");
+    }
+}

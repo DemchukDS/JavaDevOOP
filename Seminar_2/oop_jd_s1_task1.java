@@ -1,8 +1,6 @@
-package Seminar_1.task_1;
+package Seminar_2;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 import Seminar_1.task_1.clients.Animals;
 import Seminar_1.task_1.clients.Cat;
