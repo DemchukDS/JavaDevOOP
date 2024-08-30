@@ -1,4 +1,4 @@
-package Lecture_3;
+package Lecture_3.Task_1;
 
 public abstract class Foo {
     public abstract void m1();
