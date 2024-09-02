@@ -1,9 +1,9 @@
 package Seminar_2.HW;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import Seminar_2.HW.Clients.Animal;
-import Seminar_2.HW.Staff.Doctor;
 import Seminar_2.HW.Staff.Employee;
 
 public class VeterinaryClinic {
@@ -39,16 +39,22 @@ public class VeterinaryClinic {
         }
     }
 
-    public void payroll(Employee employee) {
-        cash();
+    public List<Employee> employees = new ArrayList<>();
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+    public void outputEmployees() {
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
     }
 
-    public void bonus(Employee employee) {
-        cash();
-    }
-
-    private double cash() {
-        double money = 100.500;
-        return money;
+    public void deleteEmployee(String firstName, String lastName) {
+        for (Employee employee : employees) {
+            if (employee.firstName == firstName && employee.lastName == lastName) {
+                employees.remove(employee);
+                break;
+            }
+        }
     }
 }
