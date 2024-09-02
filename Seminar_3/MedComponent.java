@@ -1,6 +1,6 @@
 package Seminar_3;
 
-public abstract class MedComponent {
+public abstract class MedComponent implements Comparable<MedComponent>{
     private String name;
     private float weight;
     private int power;
@@ -19,6 +19,11 @@ public abstract class MedComponent {
     }
     public int getPower(int power) {
         return power;
+    }
+
+    @Override
+    public int compareTo(MedComponent o) {
+        return Integer.compare(this.power, o.power);
     }
 
     @Override
