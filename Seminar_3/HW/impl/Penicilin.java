@@ -1,4 +1,4 @@
-package Seminar_3.impl;
+package Seminar_3.HW.impl;
 
 import Seminar_3.HW.MedComponent;
 

@@ -1,4 +1,4 @@
-package Seminar_3;
+package Seminar_3.HW;
 
 import Seminar_3.impl.Asitromin;
 import Seminar_3.impl.Penicilin;
