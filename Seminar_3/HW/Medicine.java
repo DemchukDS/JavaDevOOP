@@ -2,30 +2,37 @@ package Seminar_3.HW;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Medicine implements Iterator<MedComponent>{
+public class Medicine implements Comparable<Medicine>{
     private List<MedComponent> components;
-    private int index;
+    private List<Medicine> medicines;
+    private float medComponentMaxWeight;
+    private String name;
 
-    public Medicine() {
+    public Medicine(String name) {
+        this.name = name;
         this.components = new ArrayList<>();
-        this.index = 0;
+        this.medicines = new ArrayList<>();
     }
 
     protected Medicine addComponent(MedComponent component) {
         components.add(component);
+        this.components.sort(null);
+        this.medComponentMaxWeight = this.components.get(0).getWeight();
+        return this;
+    }
+
+    protected Medicine addMedicine(Medicine medicine) {
+        medicines.add(medicine);
         return this;
     }
 
     @Override
-    public boolean hasNext() {
-        return index < components.size(); // = return components.iterator().hasNext;
+    public int compareTo(Medicine o) {
+        return Float.compare(this.medComponentMaxWeight, o.medComponentMaxWeight);
     }
-
     @Override
-    public MedComponent next() {
-        // return components.iterator().next();
-        return components.get(index++);
+    public String toString() {
+        return String.format("Medicine: %s, MaxWeith: %s", name, medComponentMaxWeight);
     }
 }

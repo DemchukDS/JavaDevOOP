@@ -1,4 +1,4 @@
-package Seminar_3.HW;
+package Seminar_3;
 
 public abstract class MedComponent implements Comparable<MedComponent>{
     private String name;

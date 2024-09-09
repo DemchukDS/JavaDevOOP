@@ -9,38 +9,30 @@ import java.util.Comparator;
 
 public class Program {
     public static void main(String[] args) {
-        MedComponent firstComponent = new Penicilin("Penicilin", 10, 4);
-        MedComponent secondComponent = new Asitromin("Asitromin", 4, 1);
-        MedComponent thirdComponent = new Vitbicid("Vetbicid", 4, 6);
 
-        Medicine2 medicine1 = new Medicine2();
-        medicine1.addComponent(firstComponent).addComponent(secondComponent).addComponent(thirdComponent);
+        Medicine medicine1 = new Medicine("Boris");
+        MedComponent m1component1 = new Penicilin("Penicilin", 10, 4);
+        MedComponent m1component2 = new Asitromin("Asitromin", 4, 1);
+        MedComponent m1component3 = new Vitbicid("Vetbicid", 4, 6);
+        medicine1.addMedicine(medicine1.addComponent(m1component1).addComponent(m1component2).addComponent(m1component3));
 
-        /**
-         * Solution with Iterator.
-        Iterator<MedComponent> medComponent = medicine1;
-        while (medComponent.hasNext()) {
-            System.out.println(medComponent.next());
-        }
-        */
+        Medicine medicine2 = new Medicine("Liva");
+        MedComponent m2component1 = new Penicilin("Penicilin", 3, 14);
+        MedComponent m2component2 = new Asitromin("Asitromin", 6, 6);
+        medicine2.addMedicine(medicine2.addComponent(m2component1).addComponent(m2component2));
 
-
-        /**
-         * Solution with Iterable.
-         */
-        // for (MedComponent medComponent : medicine1) {
-        //     System.out.println(medComponent);
-        // }
-        ArrayList<MedComponent> componentsArray = new ArrayList<>();
-        componentsArray.add(firstComponent);
-        componentsArray.add(secondComponent);
-        componentsArray.add(thirdComponent);
-        System.out.println(componentsArray);
-
-        Collections.sort(componentsArray, Comparator.reverseOrder());
-        System.out.println(componentsArray);
-
-        ArrayList<Medicine> medicineList = new ArrayList<>();
+        Medicine medicine3 = new Medicine("Filipp");
+        MedComponent m3component1 = new Penicilin("Penicilin", 12, 5);
+        MedComponent m3component2 = new Vitbicid("Vetbicid", 8, 5);
+        medicine3.addMedicine(medicine3.addComponent(m3component1).addComponent(m3component2));        
         
+        ArrayList<Medicine> medicinesArray = new ArrayList<>();
+        medicinesArray.add(medicine1);
+        medicinesArray.add(medicine2);
+        medicinesArray.add(medicine3);
+        System.out.println(medicinesArray);
+
+        Collections.sort(medicinesArray);
+        System.out.println(medicinesArray);
     }
 }

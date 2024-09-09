@@ -11,23 +11,23 @@ public abstract class MedComponent implements Comparable<MedComponent>{
         this.power = power;
     }
 
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
-    public float getWeight(float weight) {
+    public float getWeight() {
         return weight;
     }
-    public int getPower(int power) {
+    public int getPower() {
         return power;
     }
 
     @Override
     public int compareTo(MedComponent o) {
-        return Integer.compare(this.power, o.power);
+        return Float.compare(this.weight, o.weight);
     }
 
     @Override
     public String toString() {
-        return String.format("Medicine: %s\nWeight: %s\nPower: %s\n", name, weight, power);
+        return String.format("Medicine: %s, Weight: %s, Power: %s", name, weight, power);
     }
 }

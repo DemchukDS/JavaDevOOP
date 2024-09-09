@@ -9,11 +9,13 @@ import java.util.Comparator;
 
 public class Program {
     public static void main(String[] args) {
-        MedComponent firstComponent = new Penicilin("Penicilin", 10, 4);
+
+        Medicine2 medicine1 = new Medicine2();
+
+        MedComponent firstComponent = new Penicilin("Penicilin", 10, 9);
         MedComponent secondComponent = new Asitromin("Asitromin", 4, 1);
         MedComponent thirdComponent = new Vitbicid("Vetbicid", 4, 6);
 
-        Medicine2 medicine1 = new Medicine2();
         medicine1.addComponent(firstComponent).addComponent(secondComponent).addComponent(thirdComponent);
 
         /**
@@ -23,8 +25,6 @@ public class Program {
             System.out.println(medComponent.next());
         }
         */
-
-
         /**
          * Solution with Iterable.
          */
@@ -38,9 +38,6 @@ public class Program {
         System.out.println(componentsArray);
 
         Collections.sort(componentsArray, Comparator.reverseOrder());
-        System.out.println(componentsArray);
-
-        ArrayList<Medicine> medicineList = new ArrayList<>();
-        
+        System.out.println(componentsArray);        
     }
 }
